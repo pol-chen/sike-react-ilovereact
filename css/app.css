@@ -60,31 +60,34 @@ section {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255,0,0,0.3);
-  border: 2px solid #FFF;
 }
 nav {
   flex-direction: row;
 }
 nav a {
   padding: 12px;
+  font-size: 18px;
 }
 
 .section-twin {
   flex-direction: row;
 }
+
 .iphone-demo {
   flex-basis: 0;
   flex-grow: 1;
   align-self: stretch;
-  background-color: rgba(255,0,0,0.3);
 }
 
 .feature-description {
   flex-basis: 0;
   flex-grow: 1;
   align-self: stretch;
-  background-color: rgba(0,255,0,0.3);
+  align-items: flex-start;
+}
+.feature-description h2,
+.feature-description p {
+  padding: 0 10%;
 }
 
 

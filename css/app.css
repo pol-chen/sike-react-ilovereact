@@ -2,17 +2,20 @@
 
 @import "../node_modules/normalize.css/normalize.css";
 
+* {
+  position: relative;
+}
 body, div, span, section, nav {
   box-sizing: border-box;
   position: relative;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
   flex-shrink: 0;
   align-content: flex-start;
 
+  border: 0 solid black;
   margin: 0;
   padding: 0;
 }
@@ -58,8 +61,8 @@ a:hover {
 section {
   align-items: center;
   justify-content: center;
-  width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 nav {
   flex-direction: row;
@@ -69,6 +72,43 @@ nav a {
   font-size: 18px;
 }
 
+#slider-control {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 3px;
+}
+
+#slider-control a {
+  padding: 3px;
+}
+
+#slider-control .dot {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+
+#slider-control .active .dot {
+  background-color: #fff;
+}
+
+#intro-section {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(31,30,52,1));
+}
+
 .section-twin {
   flex-direction: row;
 }
@@ -76,18 +116,37 @@ nav a {
 .iphone-demo {
   flex-basis: 0;
   flex-grow: 1;
-  align-self: stretch;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+}
+.img-mockup {
+  width: 300px;
+  height: 630px;
+}
+.img-content {
+  position: absolute;
+  top: 90px;
+  left: 25px;
 }
 
 .feature-description {
   flex-basis: 0;
   flex-grow: 1;
   align-self: stretch;
+  justify-content: center;
   align-items: flex-start;
 }
 .feature-description h2,
 .feature-description p {
   padding: 0 10%;
+}
+
+#android-robot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%) rotate(-45deg);
 }
 
 

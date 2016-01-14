@@ -78,6 +78,7 @@ nav a {
   top: 50%;
   transform: translate(0, -50%);
   padding: 3px;
+  z-index: 1;
 }
 
 #slider-control a {
@@ -95,7 +96,7 @@ nav a {
   background-color: #fff;
 }
 
-#intro-section {
+#native {
   background-image: url(../img/background.jpg);
   background-size: cover;
   background-position: center;
